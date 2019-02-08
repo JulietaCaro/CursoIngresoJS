@@ -4,6 +4,17 @@
 */
 function mostrar()
 {
+	var nombre;
+	nombre=prompt("Diga su nombre");
+ 	elNombre.value=nombre;
+	
+	getElementById(`elNombre`)=nombre;
+
+	//tambien se puede con .value;
+	nombre=elNombre.value; 
+
 
 }
 
+//con prompt pongo el dato que quiero obtener
+//
