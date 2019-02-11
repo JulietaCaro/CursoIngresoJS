@@ -50,7 +50,7 @@ function multiplicar()
 
 	multiplicacion=primerNumero*segundoNumero;
 
-	alert("la multiplicaciones "+multiplicacion);
+	alert("la multiplicacion es "+multiplicacion);
 
 
 }

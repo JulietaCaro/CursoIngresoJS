@@ -14,7 +14,7 @@ function mostrarAumento()
 	primerImporte=parseInt(primerImporte);
 	primerResultado=parseInt(primerResultado);
 
-	cuenta=primerImporte*1.25;
+	cuenta=primerImporte*0.75;
 
 	resultado.value=cuenta;
 }
