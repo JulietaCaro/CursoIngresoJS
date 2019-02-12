@@ -23,6 +23,16 @@ function Rectangulo ()
 }
 function Circulo () 
 {
+	var radio;
+	var calculo;
+
+	radio=Radio.value;
+
+	radio=parseInt(radio);
+
+	calculo=radio*3.14;
+
+	alert("Se necesitan "+calculo);
 	
 }
 function Materiales () 

@@ -10,9 +10,9 @@ function Sumar ()
 	var tercerPrecio;
 	var suma;
 
-	primerPrecio=precioUno.value;
-	segundoPrecio=precioDos.value;
-	tercerPrecio=precioTres.value;
+	primerPrecio=PrecioUno.value;
+	segundoPrecio=PrecioDos.value;
+	tercerPrecio=PrecioTres.value;
 	
 	primerPrecio=parseInt(primerPrecio);
 	segundoPrecio=parseInt(segundoPrecio);
@@ -31,9 +31,9 @@ function Promedio ()
 	var tercerPrecio;
 	var promedio;
 
-	primerPrecio=precioUno.value;
-	segundoPrecio=precioDos.value;
-	tercerPrecio=precioTres.value;
+	primerPrecio=PrecioUno.value;
+	segundoPrecio=PrecioDos.value;
+	tercerPrecio=PrecioTres.value;
 
 	primerPrecio=parseInt(primerPrecio);
 	segundoPrecio=parseInt(segundoPrecio);
@@ -49,5 +49,23 @@ function Promedio ()
 }
 function PrecioFinal () 
 {
+	var primerPrecio;
+	var segundoPrecio;
+	var tercerPrecio;
+	var precioCasiFinal;
+	var precioFinal;
+
+	primerPrecio=PrecioUno.value;
+	segundoPrecio=PrecioDos.value;
+	tercerPrecio=PrecioTres.value;
+
+	primerPrecio=parseInt(primerPrecio);
+	segundoPrecio=parseInt(segundoPrecio);
+	tercerPrecio=parseInt(tercerPrecio);
+
+	precioCasiFinal=(primerPrecio+segundoPrecio+tercerPrecio)*0.21;
+	precioFinal=precioCasiFinal+primerPrecio+segundoPrecio+tercerPrecio;
 	
+
+	alert("El precio es "+precioFinal);	
 }
