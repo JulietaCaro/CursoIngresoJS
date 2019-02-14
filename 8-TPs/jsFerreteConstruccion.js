@@ -35,8 +35,23 @@ function Circulo ()
 	alert("Se necesitan "+calculo);
 	
 }
-function Materiales () 
+function MaterialesContrapiso () 
 {
-	
-	
+	var largoTerreno;
+	var anchoTerreno;
+	var cemento;
+	var cal;
+
+	largoTerreno=Largo.value;
+	anchoTerreno=Ancho.value;
+
+	largoTerreno=parseInt(largoTerreno);
+	anchoTerreno=parseInt(anchoTerreno);
+
+	cemento=largoTerreno*anchoTerreno*2;
+	cal=largoTerreno*anchoTerreno*3;
+
+	alert("Se necesitan "+cemento"bolsas de cemento y "+cal"bolsas de cal");
+
+
 }
