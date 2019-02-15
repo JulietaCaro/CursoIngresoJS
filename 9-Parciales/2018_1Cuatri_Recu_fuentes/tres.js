@@ -1,20 +1,29 @@
 function mostrar()
 {
-	var precioInicial;
-	var porcentaje;
-	var cuenta;
+	var amigos;
+	var precio;
+	var precioConPropina;
+	var precioConIVA;
+	var precioPorPersona;
+	
 
-	precioInicial=prompt("Diga el precio inicial");
-	porcentaje=prompt("Diga el porcentaje");
+	amigos=prompt("Diga la cantidad de amigos");
+	precio=prompt("Diga el precio de la cena");
+	
 
-	precioInicial=parseInt(precioInicial);
-	porcentaje=parseInt(porcentaje);
+	amigos=parseInt(amigos);
+	precio=parseInt(precio);
 
-	cuenta=precioInicial*porcentaje/100-precioInicial;
+	amigos=losAmigos.value;
+	precio=elPrecio.value;
 
-	elPrecioFinal.value=cuenta;	
+	precioConPropina=precio*1.10;
 
+	precioConIVA=precioConPropina*1.21;
 
+	precioPorPersona=precioConIVA/amigos;
+
+	alert("El precio total a pagar es de $ "+precioPorPersona);
 
 
 
