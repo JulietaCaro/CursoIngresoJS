@@ -1,17 +1,29 @@
 
 function mostrar()
 {
-	var ancho;
-	var largo;
-	var cuenta;
+	var primerMascota;
+	var segundaMascota;
+	var pesoPrimerM;
+	var pesoSegundaM;
+	var suma;
 
-	ancho=prompt("Diga el ancho");
-	largo=prompt("Diga el largo");
+	primerMascota=prompt("Diga el nombre de su mascota");
+	segundaMascota=prompt("Si tiene otra mascota, diga su nombre");
 
-	ancho=parseInt(ancho);
-	largo=parseInt(largo);
+	pesoPrimerM=prompt("Diga el peso de la primer mascota");
+	pesoSegundaM=prompt("Diga el peso de la segunda mascota");
 
-	cuenta=ancho*2+largo*2;
+	primerMascota=mascotaPrimera.value;
+	segundaMascota=mascotaSegunda.value;
 
-	alert("El perimetro es "+cuenta);
+	pesoPrimerM=primerPeso.value;
+	pesoSegundaM=segundoPeso.value;
+
+	pesoPrimerM=parseInt(pesoPrimerM);
+	pesoSegundaM=parseInt(pesoSegundaM);
+
+	suma=pesoPrimerM+pesoSegundaM;
+	
+
+	alert("tenes dos mascotas "+primerMascota"y "+segundaMascota"que pesan "+pesoPrimerM"y "+pesoSegundaM "kilos, la suma de los kilos es "+suma);
 }
