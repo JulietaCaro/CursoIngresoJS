@@ -14,44 +14,45 @@ function CalcularPrecio ()
  	var laMarca;
  	var precio;
  	var precioBruto;
- 	var precioTotal;
+ 	var precioConDescuento;
+ 	var mensaje;
+
 
  	precio=35;
  	precioBruto=35*cantidadLamparas;
 
 
- 	cantidadLamparas=Cantidad.value;
- 	laMarca=Marca.value;
+ 	cantidadLamparas=document.getElementById('Cantidad').value;
+ 	laMarca=document.getElementById('Marca').value;
+ 	
 
  	cantidadLamparas=parseInt(cantidadLamparas);
 
  	if(cantidadLamparas>5)
  	{
- 		precioTotal=precioBruto*0.5;
+ 		precioConDescuento=precioBruto*0.5;
+ 		
+ 		
  	}else
  	{
  		if(cantidadLamparas==5);
  		{
  			if(laMarca=="ArgentinaLuz");
  			{
- 				precioTotal=precioBruto*0.6;
+ 				precioConDescuento=precioBruto*0.6;
+ 				
  			}else
  			{
  				if(laMarca!="ArgentinaLuz");
  				{
- 					precioTotal=precioBruto*0.7;
+ 					precioConDescuento=precioBruto*0.7;
+ 					mensaje=precioConDescuento;
  				}
  			}
  		}
  	}
-
  	
 
 
-
-
-
-
-
-
+alert(precioConDescuento);
 }
