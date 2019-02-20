@@ -16,22 +16,31 @@ function mostrar()
 		mensaje=""+primerNumero+segundoNumero;
 	}
 		 
-else{	
+	else{	
 		if(primerNumero>segundoNumero)
 			{
 				calculo=primerNumero-segundoNumero;
 				mensaje=calculo;
 			}
-	}		
-	else{
-			if(primerNumero<segundoNumero)
-				{
-					calculo=primerNumero+segundoNumero;
-					mensaje=calculo;
-				}
-		
 		}
+
+		if(primerNumero<segundoNumero)
+		{
+			calculo=primerNumero+segundoNumero;
+			mensaje=calculo;
+		}
+		/*else
+		{
+			if(calculo>9)
+			{
+				mensaje="La suma es "+calculo"y superó el 10";
+			}
+		}*/
+
 		
+
+	
+
 
 	alert(mensaje);
 }

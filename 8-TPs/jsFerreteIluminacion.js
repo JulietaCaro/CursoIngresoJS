@@ -10,49 +10,82 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidadLamparas;
- 	var laMarca;
- 	var precio;
+ 	var lamparas;
+ 	var marca;
+ 	var cantidad;
+ 	var pago;
  	var precioBruto;
- 	var precioConDescuento;
- 	var mensaje;
+ 	var ingresoBruto;
 
-
- 	precio=35;
- 	precioBruto=35*cantidadLamparas;
-
-
- 	cantidadLamparas=document.getElementById('Cantidad').value;
- 	laMarca=document.getElementById('Marca').value;
+ 	precioBruto=lamparas*cantidad;
+ 	lamparas=35;
+ 	lamparas=parseInt(lamparas);
+ 	marca=document.getElementById("Marca").value;
+ 	cantidad=parseInt(cantidad);
+ 	cantidad=document.getElementById("Cantidad").value;
  	
 
- 	cantidadLamparas=parseInt(cantidadLamparas);
-
- 	if(cantidadLamparas>5)
+ 	if(cantidad>5)
  	{
- 		precioConDescuento=precioBruto*0.5;
+ 		lamparas=precioBruto*0.5;
  		
  		
  	}else
  	{
- 		if(cantidadLamparas==5);
+ 		if(cantidad==5);
  		{
- 			if(laMarca=="ArgentinaLuz");
+ 			if(marca=="ArgentinaLuz")
  			{
- 				precioConDescuento=precioBruto*0.6;
+ 				lamparas=lamparas*0.6;
  				
  			}else
  			{
- 				if(laMarca!="ArgentinaLuz");
- 				{
- 					precioConDescuento=precioBruto*0.7;
- 					mensaje=precioConDescuento;
- 				}
+ 				lamparas=lamparas*0.7;
+ 				
  			}
  		}
  	}
  	
+ 		if(cantidad==4)
+ 		{
+ 			if(marca=="ArgentinaLuz" || marca=="“FelipeLamparas”")
+ 			{
+ 				lamparas=lamparas*0.75;
+ 			}
+
+ 		}else
+ 		{
+ 			lamparas=lamparas*0.80;
+ 		}
 
 
-alert(precioConDescuento);
+ 		if(cantidad==3)
+ 		{
+ 			if(marca=="ArgentinaLuz")
+ 			{
+ 				lamparas=lamparas*0.85;
+ 			}
+ 		}else
+ 			{	
+ 				if(marca=="“FelipeLamparas”")
+ 				{
+ 					lamparas=lamparas*0.9;
+ 				}
+ 				else
+ 				{
+ 					lamparas=lamparas*0.95;
+ 				}
+
+ 			}
+
+ 			pago=lamparas*cantidad;
+
+ 			if(pago>119)
+ 			{
+ 				ingresoBruto=pago*0.10;
+ 				pago=pago+ingresoBruto;
+ 				alert("Por una suma de $120 debe pagar $" +ingresoBruto+" de ingreso bruto");
+ 			}
+
+ 			document.getElementById("precioDescuento").value=pago;
 }

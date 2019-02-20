@@ -10,8 +10,8 @@ function mostrar()
 	
 	if(laEdad<13)
 	{
-	mensaje="Es niño";
-	}	else
+		mensaje="Es niño";
+	}else
 			{ 
 				if(laEdad<17)
 				{
