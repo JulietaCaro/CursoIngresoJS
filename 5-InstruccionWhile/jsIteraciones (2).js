@@ -1,40 +1,20 @@
 function mostrar()
 {
-	var mesDelAño;
-	var mensaje;
+	var contador;
 
-	mesDelAño=document.getElementById('mes').value;
+	contador=0;
 
-	switch(mesDelAño)
+	while(contador<10)
 	{
-		case "Julio":
-		case "Agosto":
+		contador++;
+		console.log(11-contador);
+	}	
 
-		mensaje="Abrigate que hace frio";
-		break;
-
-		case "Enero":
-		case "Febrero":
-		case "Marzo":
-		case "Abril":
-		case "Mayo":
-		case "Junio":
-
-		mensaje="Falta para el invierno";
-		break;
-
-		case "Septiembre":
-		case "Octubre":
-		case "Noviembre":
-		case "Diciembre":
-
-		mensaje="Ya pasamos el frio, ahora calor!!!";
-		break;
-
-	}
-
-
-	alert(mensaje);
+/*contador=10;
+while (contador>0)
+{
+	console.log(contador--);
+}*/
 
 
 }//FIN DE LA FUNCIÓN

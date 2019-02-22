@@ -2,23 +2,22 @@ function mostrar()
 {
 
 //var clave = prompt("ingrese el número clave.");
-	var mesDelAño;
-	var mensaje;
+	var clave;
+	var contador;
 
-	mesDelAño=document.getElementById('mes').value;
+	contador=0
+	clave=prompt("Ingrese el numero clave");
 
-	switch(mesDelAño)
+	while(clave!="utn750")
 	{
-		case "Febrero":
-			mensaje="Este mes no tiene mas de 29 días";
+		clave=prompt("Ingrese el numero clave");
+		if(contador>2)
+		{
+			contador++;
 			break;
+		}
+	}
 
-			default:
-				mensaje="Este mes tiene mas de 30 dias";
-			break;	
-	}		
-
-alert(mensaje);
 
 
 }//FIN DE LA FUNCIÓN
