@@ -47,7 +47,7 @@ alert(totalDescuento);
 			{	
 				totalDescuentoPaquete=(totalAPagar*0.85)*0.9;
 			}
-		
+
 			else
 			{
 				if(tipoDePago==efectivo)
