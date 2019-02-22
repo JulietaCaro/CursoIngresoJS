@@ -50,10 +50,6 @@ function mostrar()
 
 alert(totalConDescuento);
 
-	primerImporte=document.getElementById('importePrimero').value;
-	segundoImporte=document.getElementById("importeSegundo").value;
-	tercerImporte=document.getElementById("importeTercero").value;
-	cuartoImporte=document.getElementById("cuartoImporte").value;
 	
 
 	if(primerImporte>=segundoImporte && primerImporte>=tercerImporte && primerImporte>=cuartoImporte)
