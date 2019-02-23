@@ -8,6 +8,7 @@ function mostrar()
 	{
 		contador++;
 		console.log(11-contador);
+		//document.write(contador + "<br>")
 	}	
 
 /*contador=10;

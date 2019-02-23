@@ -3,19 +3,28 @@ function mostrar()
 
 //var clave = prompt("ingrese el número clave.");
 	var clave;
-	var contador;
+	var intentos;
+	var flag;
 
-	contador=0
+	intentos=0;
+	flag=false;
 	clave=prompt("Ingrese el numero clave");
 
 	while(clave!="utn750")
 	{
+		alert("Clave incorrecta");
 		clave=prompt("Ingrese el numero clave");
-		if(contador>2)
+		intentos=intentos+1;
+		if(intentos==2)
 		{
-			contador++;
+			flag=true;
+			alert("Clave incorrecta mas de tres veces");
 			break;
 		}
+	}
+	if(flag==false)
+	{
+		alert("Bienvenido al sistema");
 	}
 
 
