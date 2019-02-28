@@ -1,36 +1,15 @@
 function mostrar()
-{//var sexo = prompt("ingrese f ó m .");
-//document.getElementById('Sexo').value=sexo;
+{
+	var sexo;
+	sexo = prompt("ingrese f ó m .");
 
-	var horaDelDia;
-	var mensaje;
+    while(sexo != "m" && sexo != "f") 
+    {
+     	sexo = prompt("Ingrese un sexo valido (f o m)");
+    }   
+    
 
-	horaDelDia=document.getElementById('hora').value;
-	horaDelDia=parseInt(horaDelDia);
-
-	switch(horaDelDia)
-	{
-		case 7:
-		case 8:
-		case 9:
-		case 10:
-		case 11:
-			mensaje="Es de mañana";
-			break;
-
-		default:
-			break;		
-
-
-	}	
-
-alert(mensaje);
-
-
-
-
-
-
+    document.getElementById('Sexo').value = "Su sexo es " + sexo;
 
 
 

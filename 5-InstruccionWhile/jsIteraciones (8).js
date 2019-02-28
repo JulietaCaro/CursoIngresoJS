@@ -5,6 +5,7 @@ function mostrar()
 	var positivo;
 	var negativo;
 	var respuesta;
+	var numero;
 
 	contador=0;
 	positivo=0;
@@ -16,12 +17,23 @@ function mostrar()
 	queresContinuar="si";
 	while(queresContinuar!="no")
 	{
-
-
+		numero=prompt("Diga un numero, puede ser positivo o negativo");
+		numero=parseInt(numero);
+		if(numero>0)
+		{
+			positivo=positivo+numero;
+		}
+		else
+		{
+			negativo=negativo+numero;
+			contador++;
+			negativo=negativo-numero;
+		}
 
 		queresContinuar=prompt("para salir ingrese no");
 	}	
 	
+
 
 	
 	
