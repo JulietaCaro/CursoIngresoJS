@@ -20,7 +20,7 @@ function mostrar()
 		numeroIngresado=prompt("Ingrese numero");
 		numeroIngresado=parseInt(numeroIngresado);
 		
-		if(contador==0) /*con bandera pongo si es igual a 0 despues si bandera es igual a 1 se rompe */
+		if(contador==0 ) /*con bandera pongo si es igual a 0 despues si bandera es igual a 1 se rompe */
 		{
 			numeroMaximo=numeroIngresado;
 			numeroMinimo=numeroIngresado;

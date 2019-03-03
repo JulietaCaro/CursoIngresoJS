@@ -4,46 +4,75 @@ a) El promedio de las notas totales.
 b) La nota más baja y el sexo de esa persona. 
 c) La cantidad de varones que su nota haya sido mayor o igual a 6.*/
 
-
 function mostrar()
 {
-	var notas;
-	var sexo;
+	var notaAlumno;
+	var sexoAlumno;
 	var contador;
-	var alumnos;
-	var promedio;
-	var notasDadas;
+	var promedioNotas;
+	var contadorNotas;
+	var acumuladorNotas;
+	var notaMinima;
+	var banderaNotaMinima;
+	var sexoNotaMinima;
+	var contadorHombres;
 
 	contador=0;
-	alumnos=5
-
-	/*while(contador<5)
-	{
-		notas=prompt("Diga la nota del alumno");
-		sexo=prompt("Diga el sexo del alumno");
-		notas=parseInt(nota);
-		contador++;
-
-	}*/
-
-	while(notas<0 || notas>10)
-	{
-		notasDadas=prompt("Diga las notas");
-		notasDadas=parseInt(notas);
-	}
+	notaAlumno=0;
+	sexoAlumno=0;
+	contadorNotas=0;
+	acumuladorNotas=0;
+	sexoNotaMinima=0;
+	notaMinima=0;
+	contadorHombres=0;
 
 	while(contador<5)
 	{
-		notasDadas=prompt("Diga la nota del alumno");
-		sexo=prompt("Diga el sexo del alumno");
-		notasDadas=parseInt(notas);
-		contador++;
-	}
+		notaAlumno=prompt("Diga la nota del alumno");
+		notaAlumno=parseInt(notaAlumno);
+
+		while(notaAlumno<0 || notaAlumno>10)
+		{
+			notaAlumno=prompt("Reingrese la nota del alumno");
+			break;
+		}	
+
+		sexoAlumno=prompt("Diga el sexo del alumno");
+
+		while(sexoAlumno!="m" && sexoAlumno!="f")
+		{	
+			sexoAlumno=prompt("Reingrese el sexo del alumno");
+			break;
+		}
+
+		if(contador==0 || notaAlumno<=notaMinima)
+		{
+			notaMinima=notaAlumno;
+			sexoNotaMinima=sexoAlumno;
+		}
+		else
+		{	if(notaMinima<notaMinima)
+			{
+				notaMinima=notaAlumno;
+				sexoNotaMinima=sexoAlumno;
+			}
+		}	
+		if(notaAlumno>=6 && sexoAlumno=="m")
+			contadorHombres++;
 
 
 
 
+	contador++;	
+	contadorNotas++;
+	acumuladorNotas=acumuladorNotas+notaAlumno;
+	}	
 
-promedio=(notas+notasDadas)/5;
-alert("El promedio de las notas es "+promedio);
+	promedioNotas=acumuladorNotas/contadorNotas;
+
+alert("El promedio de las notas es "+promedioNotas);
+alert("La nota minima es "+notaMinima+" y el sexo de esa persona es "+sexoNotaMinima);
+alert("la cantidad de varones que su nota haya sido mayor o igual a 6 es "+contadorHombres);
+
 }
+
