@@ -1,7 +1,23 @@
+/*Realizar el algoritmo que pida el ancho y el largo de un rectángulo por prompt y que muestre el perímetro por alert.*/
 
 function mostrar()
 {
-	var primerMascota;
+	var ancho;
+	var largo;
+	var perimetro;
+
+	ancho=prompt("Diga el ancho");
+	largo=prompt("Diga el largo");
+
+	ancho=parseInt(ancho);
+	largo=parseInt(largo);
+
+	perimetro=ancho*2+largo*2;
+
+	alert("El perimetro es "+perimetro);
+}
+
+	/*var primerMascota;
 	var segundaMascota;
 	var pesoPrimerM;
 	var pesoSegundaM;
@@ -13,11 +29,6 @@ function mostrar()
 	pesoPrimerM=prompt("Diga el peso de la primer mascota");
 	pesoSegundaM=prompt("Diga el peso de la segunda mascota");
 
-	primerMascota=mascotaPrimera.value;
-	segundaMascota=mascotaSegunda.value;
-
-	pesoPrimerM=primerPeso.value;
-	pesoSegundaM=segundoPeso.value;
 
 	pesoPrimerM=parseInt(pesoPrimerM);
 	pesoSegundaM=parseInt(pesoSegundaM);
@@ -25,5 +36,4 @@ function mostrar()
 	suma=pesoPrimerM+pesoSegundaM;
 	
 
-	alert("tenes dos mascotas "+primerMascota"y "+segundaMascota"que pesan "+pesoPrimerM"y "+pesoSegundaM "kilos, la suma de los kilos es "+suma);
-}
+	alert("tenes dos mascotas "+primerMascota+"y "+segundaMascota+"que pesan "+pesoPrimerM+"y "+pesoSegundaM+"kilos, la suma de los kilos es "+suma);*/

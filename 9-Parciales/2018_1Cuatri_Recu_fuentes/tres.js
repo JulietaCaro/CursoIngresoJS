@@ -1,6 +1,25 @@
+/*Pedir por prompt el precio y el porcentaje de descuento, mostrar el precio final con descuento por id.*/
 function mostrar()
 {
-	var amigos;
+	var precio;
+	var porcentaje;
+	var precioFinal;
+
+	precio=prompt("Diga el precio inicial");
+	porcentaje=prompt("Diga el porcentaje");
+
+	precio=parseFloat(precio);
+	porcentaje=parseInt(porcentaje);
+
+	precioFinal=precio-(precio*porcentaje/100);
+
+	document.getElementById('elPrecioFinal').value=precioFinal;
+
+
+
+}
+
+	/*var amigos;
 	var precio;
 	var precioConPropina;
 	var precioConIVA;
@@ -24,7 +43,3 @@ function mostrar()
 	precioPorPersona=precioConIVA/amigos;
 
 	alert("El precio total a pagar es de $ "+precioPorPersona);
-
-
-
-}

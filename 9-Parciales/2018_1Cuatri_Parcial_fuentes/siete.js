@@ -6,7 +6,11 @@ c) La cantidad de varones que su nota haya sido mayor o igual a 6.*/
 
 function mostrar()
 {
-	var notaAlumno;
+	
+
+}
+
+	/*var notaAlumno;
 	var sexoAlumno;
 	var contador;
 	var promedioNotas;
@@ -72,7 +76,4 @@ function mostrar()
 
 alert("El promedio de las notas es "+promedioNotas);
 alert("La nota minima es "+notaMinima+" y el sexo de esa persona es "+sexoNotaMinima);
-alert("la cantidad de varones que su nota haya sido mayor o igual a 6 es "+contadorHombres);
-
-}
-
+alert("la cantidad de varones que su nota haya sido mayor o igual a 6 es "+contadorHombres);*/
