@@ -108,13 +108,13 @@ function mostrar()
 	}
 
 	promedioPositivos=sumaPositivos/contadorPositivos;
-	promedioNegativos=sumaNegativos/contadorNegativos;
+	
 
 	document.write("Cantidad de numeros pares: "+contadorPares);
 	document.write(" Cantidad de numero impares: "+contadorImpares);
 	document.write(" Cantidad de ceros: "+contadorCeros);
 	document.write(" El promedio de los numeros positivos es: "+promedioPositivos);
-	document.write(" El promedio de los numeros negativos es "+promedioNegativos);
+	document.write(" La suma de los numeros negativos es "+sumaNegativos);
 	document.write(" El numero minimo es "+numeroMinimo+" y su letra es "+letraMinimo);
 	document.write(" El numero maximo es "+numeroMaximo+" y su letra es "+letraMaximo);
 }

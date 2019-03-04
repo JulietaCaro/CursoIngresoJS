@@ -6,74 +6,72 @@ c) La cantidad de varones que su nota haya sido mayor o igual a 6.*/
 
 function mostrar()
 {
-	
+	var contador;
+	var notas;
+	var sexo;
+	var SumaNotas;
+	var contadorNotas;
+	var promedioNotas;
+	var notaMinima;
+	var sexoNotaMinima;
+	var contadorVaron;
+
+	contador=0;
+	SumaNotas=0;
+	contadorNotas=0;
+	notaMinima=0;
+	sexoNotaMinima=0;
+	notas=0;
+	sexo=0;
+	contadorVaron=0;
+
+	while(contador<5)
+		{
+			notas=prompt("Ingrese la nota del alumno");
+			notas=parseInt(notas);
+
+			while(notas<0 || notas>10)
+			{
+				notas=prompt("Reingrese la nota del alumno");
+			}	
+
+			sexo=prompt("Ingrese el sexo del alumno, f o m");
+
+			while(sexo!="f" && sexo!="m")
+			{
+				sexo=prompt("Reingrese el sexo del alumno");
+			}
+
+			if(contador==0 || notas<=notaMinima)
+			{
+				notaMinima=notas;
+				sexoNotaMinima=sexo;
+			}
+			else
+			{
+				if(notas<notaMinima)
+				{
+					notaMinima=notas;
+					sexoNotaMinima=sexo;
+				}
+			}
+
+			if(notas>5 && sexo=="m")
+			{
+				contadorVaron++;
+			}
+
+			contador++;
+			contadorNotas++;
+			SumaNotas=SumaNotas+notas;
+		}
+
+	promedioNotas=SumaNotas	/contadorNotas;
+
+	alert("El promedio de las notas es "+promedioNotas);
+	alert("La nota mas baja es "+notaMinima+" y el sexo del alumno es "+sexoNotaMinima);
+	alert("Cantidad de varones que su nota es mayor o igual a seis: "+contadorVaron);	
 
 }
 
-	/*var notaAlumno;
-	var sexoAlumno;
-	var contador;
-	var promedioNotas;
-	var contadorNotas;
-	var acumuladorNotas;
-	var notaMinima;
-	var banderaNotaMinima;
-	var sexoNotaMinima;
-	var contadorHombres;
-
-	contador=0;
-	notaAlumno=0;
-	sexoAlumno=0;
-	contadorNotas=0;
-	acumuladorNotas=0;
-	sexoNotaMinima=0;
-	notaMinima=0;
-	contadorHombres=0;
-
-	while(contador<5)
-	{
-		notaAlumno=prompt("Diga la nota del alumno");
-		notaAlumno=parseInt(notaAlumno);
-
-		while(notaAlumno<0 || notaAlumno>10)
-		{
-			notaAlumno=prompt("Reingrese la nota del alumno");
-			break;
-		}	
-
-		sexoAlumno=prompt("Diga el sexo del alumno");
-
-		while(sexoAlumno!="m" && sexoAlumno!="f")
-		{	
-			sexoAlumno=prompt("Reingrese el sexo del alumno");
-			break;
-		}
-
-		if(contador==0 || notaAlumno<=notaMinima)
-		{
-			notaMinima=notaAlumno;
-			sexoNotaMinima=sexoAlumno;
-		}
-		else
-		{	if(notaMinima<notaMinima)
-			{
-				notaMinima=notaAlumno;
-				sexoNotaMinima=sexoAlumno;
-			}
-		}	
-		if(notaAlumno>=6 && sexoAlumno=="m")
-			contadorHombres++;
-
-
-
-
-	contador++;	
-	contadorNotas++;
-	acumuladorNotas=acumuladorNotas+notaAlumno;
-	}	
-
-	promedioNotas=acumuladorNotas/contadorNotas;
-
-alert("El promedio de las notas es "+promedioNotas);
-alert("La nota minima es "+notaMinima+" y el sexo de esa persona es "+sexoNotaMinima);
-alert("la cantidad de varones que su nota haya sido mayor o igual a 6 es "+contadorHombres);*/
+	

@@ -34,24 +34,29 @@ function mostrar()
 			mensaje="es de tarde";
 		break;
 		
-		default:
-		if(hora>=20 && hora<=24 || hora>=1 && hora<=5)
-		{
-			mensaje="es de noche";
-		}
-		else
-		{	
-			if(hora>5)
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			mensaje="Es de noche";
+
+			if(hora>=20 && hora<=24)
 			{
 				mensaje="a dormir";
 			}
-		else
+			else
 			{
-				mensaje="la hora no existe";
-			}	
-		
-		
-
+				if(hora>=1 && hora<=5)
+				{
+					mensaje="Es de noche";
+				}
+			}
 	}
 alert(mensaje);
 }
