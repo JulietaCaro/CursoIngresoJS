@@ -46,17 +46,15 @@ function mostrar()
 		case 5:
 			mensaje="Es de noche";
 
-			if(hora>=20 && hora<=24)
+			if(hora>=20 && hora<24)
 			{
-				mensaje="a dormir";
+				alert("a dormir");
 			}
-			else
-			{
-				if(hora>=1 && hora<=5)
-				{
-					mensaje="Es de noche";
-				}
-			}
+		break;
+
+		default:
+			mensaje="No es una hora valida";
+			
 	}
 alert(mensaje);
 }
